@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "midland-chat-board": {
+      "hosting": {
+        "chat-board": [
+          "midland-chat-board"
+        ]
+      }
+    }
+  }
+}

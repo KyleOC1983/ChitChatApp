@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <span>Chit Chat App</span>
+  <span style="flex: 1 1 auto;"></span>
+  <button routerLink="/chat" *ngIf="user && ready" mat-icon-button class="" aria-label="Chat">
+    <mat-icon>chat</mat-icon>
+  </button>
+  <button routerLink="/" *ngIf="!user && ready" mat-icon-button class="" aria-label="Login">
+    <mat-icon>login</mat-icon>
+  </button>
+  <button (click)="logout()" *ngIf="user && ready" mat-icon-button class="" aria-label="Logout">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+<router-outlet></router-outlet>
