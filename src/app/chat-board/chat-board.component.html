@@ -1,3 +1,4 @@
+<body>
 <div #output class='output-box'>
   <div *ngFor = "let m of messages">
     <span [style.color]="m.userColor">{{m.date | date:'h:mm:ss a'}} </span>
@@ -7,13 +8,14 @@
 <div class="censor">
 <mat-slide-toggle color="accent" [(ngModel)]="censorProfanity">Censor Profanity</mat-slide-toggle>
 </div>
-<div class="chat-input">
-<mat-form-field class="input-box">
-    <mat-label>Message</mat-label>
+<div class="chat-input" >
+<mat-form-field class="input-box" color="accent">
+    <mat-label >Message</mat-label>
     <textarea [(ngModel)]="messageText" matInput placeholder="Enter a new message..." (keyup.enter)="sendMessage()"></textarea>
   </mat-form-field>
 
-  <button mat-icon-button color="primary" aria-label="Send Message" (click)="sendMessage()">
+  <button mat-icon-button color="accent" aria-label="Send Message" (click)="sendMessage()">
     <mat-icon>send</mat-icon>
   </button>
 </div>
+</body>
